@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-ThinItalic-webfont.eot');
+    src: url('Roboto-ThinItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Roboto-ThinItalic-webfont.woff') format('woff'),
+         url('Roboto-ThinItalic-webfont.ttf') format('truetype'),
+         url('Roboto-ThinItalic-webfont.svg#RobotoThinItalic') format('svg'); 
+    font-weight: 200;
+    font-style: italic;
+}
+body{
+    background-color: #e9e2da !important;
+    margin: 0;
+    font-family: 'Roboto';
+}
+p{
+    padding: 0px !important;
+    margin: 0px !important;
+}
+.card-sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    width: 500px;
+    height: 550px;
+    border-radius: 40px;
+    margin: 10vh auto auto auto;
+    box-shadow: 0 3px 12px 5px rgb(0, 0, 0,0.3);
+    max-height: fit-content;
+}
+.quiz-head{
+    font-size: 55px;
+    color: #30a2a3;
+}
+.name{
+    font-weight: bold;
+    font-size: 15px;
+}
+input{
+    cursor: pointer;
+    background-color: white;
+    border-radius: 99px;
+    width: 300px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid gray;
+}
+.button{    
+    background-color: rgb(25, 187, 25);
+    border-radius: 99px !important;
+    width: 200px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid gray;
+}
+.button:hover{    
+    background-color: rgb(9, 116, 9);
+    color: white;
+    font-weight: bold;
+}
+.linktotag{
+    text-decoration: none;
+}
+.card-sec2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    width: 900px;
+    height: 500px;
+    border-radius: 40px;
+    margin: 10vh auto auto auto;
+    box-shadow: 0 3px 12px 5px rgb(0, 0, 0,0.3);
+    max-height: fit-content;
+}
+.questionCount{
+    color: #5580ff;
+}
+.ember-view{
+    width: 20px;
+    height: 12px;
+}
+.ans{
+    font-weight: 500!important;
+}
+.row{
+    margin: 0;
+    width: 100%;
+}
+.pre{    
+    background-color: rgb(167, 167, 167);
+    border-radius: 99px !important;
+    width: 150px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid gray;
+}
+ul>li{
+    list-style-type: none;
+}
+label{
+    cursor: pointer;
+}
+.quiz-finish{
+    width: 300px;
+    background-color: #49c749;;
+    box-shadow: 0 3px 12px 5px rgb(0, 0, 0,0.3);;
+    border-radius: 40px;
+}

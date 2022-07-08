@@ -1,0 +1,117 @@
+{{#if this.sessionValue}}
+<div class="container">
+    <div class="card-sec2 mb-2" id="quiz-area">
+
+        {{#unless this.scoreValue}}
+
+        <div class="questionCount mt-5 mb-3">
+            {{!-- template-lint-disable no-invalid-interactive --}}
+            <h3 class="my-2">
+                Questions {{this.questionNo}} / {{this.totalQuestion}}
+            </h3>
+        </div>
+
+        <div class="container my-3">
+
+            <div class="row">
+
+                <div class="col align-self-center text-center">
+                    <p id="time"></p>
+                </div>
+
+                <div class="col align-self-center text-center">
+                    <p><b>Mark :</b> {{this.q_Weight}}</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="qus-section my-4">
+
+            <div class="qes text-center">
+                <p>
+                    <b>{{this.question}}{{this.index}}</b>
+                </p>
+            </div><br>
+
+            <div class="ans text-left align-self-center">
+
+                <ul>
+                    <li>
+                        <input name="q1" id="a" class="ember-view answer" type="radio" value="a" />
+                        <label id="a_text" for="a">{{this.ans_one}}</label>
+                    </li>
+                    <li>
+                        <input name="q1" id="b" class="ember-view answer" type="radio" value="b">
+                        <label id="b_text" for="b">{{this.ans_two}}</label>
+                    </li>
+                    <li>
+                        <input name="q1" id="c" class="ember-view answer" type="radio" value="c">
+                        <label id="c_text" for="c">{{this.ans_three}}</label>
+                    </li>
+                    <li>
+                        <input name="q1" id="d" class="ember-view answer" type="radio" value="d">
+                        <label id="d_text" for="d">{{this.ans_four}}</label>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="container my-3">
+
+            <div class="row">
+
+                <div class="col align-self-center text-center">
+
+                    <button type="button" {{on 'click' this.exitFunction}} class="pre"> <i
+                            class="fa-solid fa-arrow-left-long"></i> Exit</button>
+                </div>
+
+                <div class="col align-self-center text-center">
+
+                    <button type="button" {{on 'click' this.checkfuntion}} class="pre">Next <i
+                            class="fa-solid fa-arrow-right-long"></i></button>
+                </div>
+            </div>
+        </div>
+
+
+        {{/unless}}
+
+        {{#if this.scoreValue}}
+
+        <div class="m-auto text-center">
+
+            <div class="mb-4">
+                <h1 class="mb-3">QUIZ</h1>
+                <h6>Completed</h6>
+            </div>
+
+            <div class=" mb-5 p-4 quiz-finish">
+
+                <h2>Your Score is </h2>
+                <h1><span id="score">{{this.score}}</span> /
+                    {{this.totalMarks}}</h1>
+
+            </div>
+
+            <button type="button" {{on 'click' this.playagainButton}} class="pre"> <i
+                    class="fa-solid fa-arrow-rotate-left"></i> Play Again</button>
+            <button type="button" {{on 'click' this.exitFunction}} class="pre">Exit</button>
+
+        </div>
+
+        {{/if}}
+
+    </div>
+</div>
+
+{{else}}
+
+<h5 class="mt-5 text-center">Sorry!</h5>
+<p class="mt-5 text-center">You have must <LinkTo class="linktotag" @route="index">Regiter</LinkTo> befour start quiz
+</p>
+
+{{/if}}
